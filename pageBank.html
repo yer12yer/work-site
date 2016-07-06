@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title> Мой первый сайт </title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function GetMath () 
+		{
+			var Percentage = percent.value;
+			var Amouth = amouth.value;
+			var Day = time.value;
+			var Time = day.value;
+			parseFloat(Percentage);
+			parseFloat(Amouth);
+			parseFloat(Day);
+			parseFloat(Time);
+			var Counter = 0;
+			var Count = Day/Time;
+			while(Counter != Count)
+			{
+				Amouth = Amouth + Amouth * Percentage/100;
+				Counter+=1;
+			}
+			alert(Amouth + " - Ваша сумма после " + Day +" дней");
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="pageStart.html">Главная</a><span>/</span>
+		<a href="pageGame.html">Игры</a><span>/</span>
+		<a href="pageNumber.html">Вычислительные программы</a><span>/</span>
+		<a href="pageAlse.html">Другое</a>
+	</div>
+<div id="content">
+	<h1> Мой первый сайт </h1>
+    <div id="center">
+		<img src="img/photo.png">
+		<div id="box_text">
+		<p> Вас приветсвует банковская программа! </p>
+		<p> Введите сумму вклада/кредита в рублях </p>
+		<input type="text" id="amouth">
+		<p> Введите срок вклада/кредита в днях </p>
+		<input type="text" id="time">
+		<p> Введите дневной процент вклада/кредита </p>
+		<input type="text" id="percent">
+		<p> Введите частоту начисления процентов вклада/кредита в днях </p>
+		<input type="text" id="day">
+		<input type="button" value="Посчитать" onclick="GetMath ()">
+	<br></br>
+        </div>
+    </div>
+</div>
+</body>
+</html>

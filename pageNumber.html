@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title> Мой первый сайт </title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function GetStart() 
+		{
+			alert("Вас приветсвует банковская программа, она просчитает ваш процент по вкладу/кредиту");
+			var Amouth = parseFloat(prompt("Введите сумму вклада/кредита в рублях"));
+			while(Amouth <= 0 || isNaN(Amouth))
+			{
+				alert("Сумма вклада/кредита выражается в числах, и она не может быть меньше нуля");
+				Amouth = parseFloat(prompt("Введите сумму вклада/кредита в рублях"));
+			}
+			var Percentage = parseFloat(prompt("Введите процент вклада/кредита в дневных - сколько процентов начисляется за день"));
+			while(Percentage <= 0 || isNaN(Percentage))
+			{
+				alert("Процент вклада/кредита выражается в числах, и он не может быть меньше нуля");
+				Percentage = parseFloat(prompt("Введите процент вклада/кредита"));
+			}
+			var Day = parseFloat(prompt("Введите срок вклада/кредита в днях"));
+			while(Day <= 0 || isNaN(Day))
+			{
+				alert("Срок вклада/кредита выражается в числах, и он не может быть меньше нуля");
+			}
+			var Time = parseFloat(prompt("Введите частоту начисления процентов в днях"));
+			while(Time <= 0 || isNaN(Time))
+			{
+				alert("Частота начисления процентов выражается в числах, и она не может быть меньше нуля");
+			}
+			var Counter = 0;
+			var Count = Day/Time
+			while(Counter != Count)
+			{
+				Math.round(Amouth = Amouth + Amouth * Percentage/100);
+				Counter = Counter + 1;
+				alert(Amouth + " - Ваша сумма после " + Counter * Time +" дней");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="pageStart.html">Главная</a><span>/</span>
+		<a href="pageGame.html">Игры</a><span>/</span>
+		<a href="pageNumber.html">Вычислительные программы</a><span>/</span>
+		<a href="pageAlse.html">Другое</a>
+	</div>
+<div id="content">
+	<h1> Мой первый сайт </h1>
+    <div id="center">
+		<img src="img/photo.png">
+		<div id="box_text">
+		<p> Банковская программа может посчитать Ваш процент по вкладу или кредиту! </p>
+		<a href="pageBank.html">Посчитать</a>    
+	<br></br>
+        </div>
+    </div>
+</div>
+</body>
+</html>
